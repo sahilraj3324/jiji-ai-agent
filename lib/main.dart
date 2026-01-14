@@ -1,7 +1,9 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // Using the key provided by user in gemini_api.dart
-      home: const HomeScreen(apiKey: 'AIzaSyDRs9nXzU7WcNB2KTepbpVhuQsO3MOjvM0'),
+      home: HomeScreen(apiKey: dotenv.env['GEMINI_API_KEY'] ?? ''),
     );
   }
 }

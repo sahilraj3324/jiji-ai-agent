@@ -21,7 +21,7 @@ class GeminiApi {
     List<Map<String, dynamic>>? conversationHistory,
   }) async {
     final url = Uri.parse(
-      '$_baseUrl/models/gemini-2.5-flash:generateContent?key=AIzaSyDRs9nXzU7WcNB2KTepbpVhuQsO3MOjvM0',
+      '$_baseUrl/models/gemini-2.5-flash:generateContent?key=$apiKey',
     );
 
     // Build the contents array with conversation history
@@ -116,7 +116,7 @@ class GeminiApi {
     List<Map<String, dynamic>>? conversationHistory,
   }) async* {
     final url = Uri.parse(
-      '$_baseUrl/models/gemini-2.5-flash:streamGenerateContent?key=AIzaSyDRs9nXzU7WcNB2KTepbpVhuQsO3MOjvM0',
+      '$_baseUrl/models/gemini-2.5-flash:streamGenerateContent?key=$apiKey',
     );
 
     final List<Map<String, dynamic>> contents = [];

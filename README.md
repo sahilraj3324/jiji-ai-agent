@@ -42,17 +42,20 @@
    git clone https://github.com/sahilraj3324/jiji-ai-agent.git
    cd jiji-ai-agent
    ```
-
-2. **Install dependencies**:
+2. **Create a .env file**:
+   ```bash
+   cp .envExample .env
+   ```
+3. **Install dependencies**:
    ```bash
    flutter pub get
    ```
 
-3. **Configure API Key**:
-   - Open `lib/screens/home_screen.dart` or `lib/api/gemini_api.dart`.
+4. **Configure API Key**:
+   - Open `.env` file.
    - Replace the API key placeholder with your own Gemini API Key.
 
-4. **Run the app**:
+5. **Run the app**:
    ```bash
    flutter run
    ```
